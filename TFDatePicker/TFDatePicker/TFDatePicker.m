@@ -43,6 +43,8 @@ NSInteger buttonSize = 16;
 	showPopoverButton.imagePosition = NSImageOnly;
 
 	NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:@"com.wannabegeek.TFDatePicker"];
+    if(!frameworkBundle)
+        frameworkBundle = [NSBundle mainBundle];
 	showPopoverButton.image = [frameworkBundle imageForResource:@"calendar"];
 	[showPopoverButton.cell setHighlightsBy:NSContentsCellMask];
 
